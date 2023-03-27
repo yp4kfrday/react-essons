@@ -2,8 +2,6 @@ import React from 'react';
 
 import styles from './NotFoundBlock.module.scss';
 
-console.log(styles)
-
 const NotFoundBlock = () => {
   return (
     <div className={styles.root}>
@@ -14,9 +12,6 @@ const NotFoundBlock = () => {
       Данная страница не работает или недоступна.
       </p1>
     </div>
-
-
-
   )
 }
 

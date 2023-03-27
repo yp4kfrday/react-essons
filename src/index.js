@@ -10,19 +10,29 @@ import { Provider } from 'react-redux';
 import App from './App';
 import NotFound from './pages/NotFound';
 import Cart from './pages/Cart';
+import DetailedPerfumePage from './pages/DetailedPerfumePage';
 
 import store  from './redux/store.js';
+import MainLayout from './layots/MainLayout';
 
 
 const router = createBrowserRouter([
   {
     path: "*",
-    element: <App />,
+    element: <MainLayout />,
     errorElement: <NotFound />,
     children: [
       {
+        path: "",
+        element: <App />,
+      },
+      {
         path: "cart",
         element: <Cart />,
+      },
+      {
+        path: "perfume/:id",
+        element: <DetailedPerfumePage />,
       },
     ],
   },
