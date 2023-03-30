@@ -12,7 +12,6 @@ import Sort from '../components/Sort';
 import PerfumeBlock from '../components/perfumeBlock/Index.jsx';
 import PerfumeSkeleton from '../components/perfumeBlock/Skeleton';
 import Pagination from "../pagination/Index";
-import { SearchContext } from "../App";
 import { fetchPerfumes } from "../redux/slices/perfumeSlice";
 
 export const Home = () => {

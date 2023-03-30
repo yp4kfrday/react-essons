@@ -13,7 +13,7 @@ import Cart from './pages/Cart';
 import DetailedPerfumePage from './pages/DetailedPerfumePage';
 
 import store  from './redux/store.js';
-import MainLayout from './layots/MainLayout';
+import MainLayout from './layouts/MainLayout';
 
 
 const router = createBrowserRouter([
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     errorElement: <NotFound />,
     children: [
       {
-        path: "",
+        path: "/*",
         element: <App />,
       },
       {
@@ -38,13 +38,17 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
-  </React.StrictMode>
-);
+const rootElement = document.getElementById("root");
+
+if (rootElement) {
+  ReactDOM.createRoot(rootElement).render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
+    </React.StrictMode>
+  );
+}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
