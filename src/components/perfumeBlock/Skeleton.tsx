@@ -1,7 +1,7 @@
 import React from "react"
 import ContentLoader from "react-content-loader"
 
-const PerfumeSkeleton = (props) => (
+const PerfumeSkeleton = (props: any) => (
     <ContentLoader
         className="perfume-block"
         speed={2}

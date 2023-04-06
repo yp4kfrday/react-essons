@@ -9,28 +9,29 @@ import { setCategoryId, setCurrentPage, setFilters } from "../redux/slices/filte
 import { sortList } from '../components/Sort'
 import Categories from '../components/Categories';
 import Sort from '../components/Sort';
-import PerfumeBlock from '../components/perfumeBlock/Index.jsx';
+import PerfumeBlock from '../components/perfumeBlock/Index';
 import PerfumeSkeleton from '../components/perfumeBlock/Skeleton';
 import Pagination from "../pagination/Index";
 import { fetchPerfumes } from "../redux/slices/perfumeSlice";
 
-export const Home = () => {
+export const Home: React.FC = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const isSearch = React.useRef(false);
     const isMounted = React.useRef(false);
-
+// @ts-ignore
     const { items, status } = useSelector((state) => state.perfume);
+    // @ts-ignore
     const { categoryId, sort, currentPage, searchValue } = useSelector((state) => state.filter);
 
 
 
-    const onChangeCategory = (id) => {
-        dispatch(setCategoryId(id));
+    const onClickCategory = (idx: number) => {
+        dispatch(setCategoryId(idx));
     };
 
-    const onChangePage = number => {
-        dispatch(setCurrentPage(number));
+    const onChangePage = (value: number) => {
+        dispatch(setCurrentPage(value));
     };
 
     const getPerfumes = async () => {
@@ -41,6 +42,7 @@ export const Home = () => {
         const search = searchValue ? `&search=${searchValue}` : '';
 
         dispatch
+        // @ts-ignore
             (fetchPerfumes({
                 sortBy,
                 order,
@@ -90,14 +92,14 @@ export const Home = () => {
         isSearch.current = false;
     }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-    const perfumesItem = items.map((obj) => <PerfumeBlock key={obj.id} {...obj} />);
+    const perfumesItem = items.map((obj: any) => <PerfumeBlock key={obj.id} {...obj} />);
 
     const skeletons = [...new Array(6)].map((_, index) => <PerfumeSkeleton key={index} />);
 
-    return (
+    return ( 
         <div className="container">
             <div className="content__top">
-                <Categories value={categoryId} onClickCategory={onChangeCategory} />
+                <Categories value={categoryId} onClickCategory={onClickCategory} />
                 <Sort />
             </div>
             <h2 className="content__title">Каталог</h2>

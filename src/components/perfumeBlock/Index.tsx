@@ -6,8 +6,19 @@ import { addItem } from "../../redux/slices/cartSlice";
 
 const typeNames = ['1,5ml', '50ml']
 
-function PerfumeBlock({ id, title, price, imageUrl, sizes, types }) {
+type PerfumeBlockProps = {
+    id: string;
+    title: string;
+    price: number;
+    imageUrl: string;
+    sizes: number[];
+    types: number[];
+    rating: number;
+}
+
+const PerfumeBlock: React.FC<PerfumeBlockProps> = ({ id, title, price, imageUrl, sizes, types }) => {
     const dispatch = useDispatch()
+    // @ts-ignore
     const cartItem = useSelector(state => state.cart.items.find((obj) => obj.id === id));
     const [activeType, setActiveType] = React.useState(0);
     const [activeSize, setActiveSize] = React.useState(0);
