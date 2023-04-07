@@ -12,8 +12,8 @@ import NotFound from './pages/NotFound';
 import Cart from './pages/Cart';
 import DetailedPerfumePage from './pages/DetailedPerfumePage';
 
-import store  from './redux/store.js';
 import MainLayout from './layouts/MainLayout';
+import { store } from './redux/store';
 
 
 const router = createBrowserRouter([

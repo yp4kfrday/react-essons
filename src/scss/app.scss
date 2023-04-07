@@ -233,6 +233,30 @@ body {
             display: none;
           }
         }
+
+        
+
+        &--disabled{
+          opacity: 0.4;
+          border-color: #1d1313;
+
+          svg path {
+            fill: #1d1313
+          }
+          &:hover{
+            background-color: transparent;
+
+            svg path {
+              fill: #1d1313
+            }
+          }
+  
+          &:active {
+            transform: none;
+
+            
+          } 
+        }
       }
 
       b {

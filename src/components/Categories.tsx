@@ -5,24 +5,26 @@ type CategoriesProps = {
   onClickCategory: (index: number) => void;
 }
 
-const Categories: React.FC<CategoriesProps> = ({ value, onClickCategory }) => {
-  const categories = ['Все', 'Духи', 'Пробники', 'Комплекты пробников', 'Что-то ещё']
-
-  return (
-    <div className="categories">
-      <ul>
-        {
-          categories.map((categoryName, index) =>
-            <li
-              key={index}
-              onClick={() => onClickCategory(index)}
-              className={value === index ? 'active' : ''}>
-              {categoryName}
-            </li>)
-        }
-      </ul>
-    </div>
-  )
-}
+const Categories: React.FC<CategoriesProps> = React.memo(
+  ({ value, onClickCategory }) => {
+    const categories = ['Все', 'Духи', 'Пробники', 'Комплекты пробников', 'Что-то ещё']
+    
+    return (
+      <div className="categories">
+        <ul>
+          {
+            categories.map((categoryName, index) =>
+              <li
+                key={index}
+                onClick={() => onClickCategory(index)}
+                className={value === index ? 'active' : ''}>
+                {categoryName}
+              </li>)
+          }
+        </ul>
+      </div>
+    )
+  }
+)
 
 export default Categories;
