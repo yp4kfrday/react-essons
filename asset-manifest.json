@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-essons/build/static/css/main.b6855354.css",
-    "main.js": "/react-essons/build/static/js/main.1dafb7dc.js",
-    "static/media/logo.jpg": "/react-essons/build/static/media/logo.1d9822fb1df1b332a276.jpg",
-    "index.html": "/react-essons/build/index.html",
-    "main.b6855354.css.map": "/react-essons/build/static/css/main.b6855354.css.map",
-    "main.1dafb7dc.js.map": "/react-essons/build/static/js/main.1dafb7dc.js.map"
+    "main.css": "/react-essons/static/css/main.b6855354.css",
+    "main.js": "/react-essons/static/js/main.8b8ec3ce.js",
+    "static/media/logo.jpg": "/react-essons/static/media/logo.1d9822fb1df1b332a276.jpg",
+    "index.html": "/react-essons/index.html",
+    "main.b6855354.css.map": "/react-essons/static/css/main.b6855354.css.map",
+    "main.8b8ec3ce.js.map": "/react-essons/static/js/main.8b8ec3ce.js.map"
   },
   "entrypoints": [
     "static/css/main.b6855354.css",
-    "static/js/main.1dafb7dc.js"
+    "static/js/main.8b8ec3ce.js"
   ]
 }
