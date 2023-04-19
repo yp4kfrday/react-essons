@@ -16,7 +16,6 @@
     "ahooks": "^3.7.6",
     "axios": "^1.3.4",
     "clsx": "^1.2.1",
-    "gh-pages": "^5.0.0",
     "jekyll": "^3.0.0-beta1",
     "lodash.debounce": "^4.0.8",
     "qs": "^6.11.1",
