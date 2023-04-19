@@ -2,7 +2,7 @@
   "name": "react-essons",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yp4kfrday.github.io/react-essons",
+  "homepage": "https://myusername.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "z^5.16.5",
